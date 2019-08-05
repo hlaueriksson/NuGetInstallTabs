@@ -1,0 +1,103 @@
+<html>
+
+<head>
+  <link href="https://www.nuget.org/Content/gallery/css/site.min.css?v=QJdqFsVeXIn6wA6puealOW4ZHiHy2D8xdrJMfDQpMI81" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="install-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+      <a href="#package-manager" aria-expanded="true" id="package-manager-tab" class="package-manager-tab" aria-selected="true" aria-controls="package-manager" role="tab" data-toggle="tab" title="Switch to tab panel which contains package installation command for Package Manager">
+        Package Manager
+      </a>
+    </li>
+    <li role="presentation" class="">
+      <a href="#dotnet-cli" aria-expanded="false" id="dotnet-cli-tab" class="package-manager-tab" aria-selected="false" aria-controls="dotnet-cli" role="tab" data-toggle="tab" title="Switch to tab panel which contains package installation command for .NET CLI">
+        .NET CLI
+      </a>
+    </li>
+    <li role="presentation" class="">
+      <a href="#package-reference" aria-expanded="false" id="package-reference-tab" class="package-manager-tab" aria-selected="false" aria-controls="package-reference" role="tab" data-toggle="tab" title="Switch to tab panel which contains package installation command for PackageReference">
+        PackageReference
+      </a>
+    </li>
+    <li role="presentation" class="">
+      <a href="#paket-cli" aria-expanded="false" id="paket-cli-tab" class="package-manager-tab" aria-selected="false" aria-controls="paket-cli" role="tab" data-toggle="tab" title="Switch to tab panel which contains package installation command for Paket CLI">
+        Paket CLI
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="package-manager">
+      <div>
+        <div class="install-script-row">
+          <pre class="install-script" id="package-manager-text">Install-Package {{package}} -Version {{version}}</pre>
+          <div class="copy-button">
+            <button id="package-manager-button" class="btn btn-default btn-warning" type="button" data-toggle="popover" data-placement="bottom" data-content="Copied." aria-label="Copy the Package Manager command" data-original-title="" title="">
+              <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="dotnet-cli">
+      <div>
+        <div class="install-script-row">
+          <pre class="install-script" id="dotnet-cli-text">dotnet add package {{package}} --version {{version}}</pre>
+          <div class="copy-button">
+            <button id="dotnet-cli-button" class="btn btn-default btn-warning" type="button" data-toggle="popover" data-placement="bottom" data-content="Copied." aria-label="Copy the .NET CLI command" data-original-title="" title="">
+              <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="package-reference">
+      <div>
+        <div class="install-script-row">
+          <pre class="install-script" id="package-reference-text">&lt;PackageReference Include="{{package}}" Version="{{version}}" /&gt;</pre>
+          <div class="copy-button">
+            <button id="package-reference-button" class="btn btn-default btn-warning" type="button" data-toggle="popover" data-placement="bottom" data-content="Copied." aria-label="Copy the PackageReference XML node" data-original-title="" title="">
+              <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="icon-text alert alert-info">
+        <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i>
+        For projects that support <a href="https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files">PackageReference</a>, copy this XML node into the project file to reference the package.
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="paket-cli">
+      <div>
+        <div class="install-script-row">
+          <pre class="install-script" id="paket-cli-text">paket add {{package}} --version {{version}}</pre>
+          <div class="copy-button">
+            <button id="paket-cli-button" class="btn btn-default btn-warning" type="button" data-toggle="popover" data-placement="bottom" data-content="Copied." aria-label="Copy the Paket CLI command" data-original-title="" title="">
+              <span class="ms-Icon ms-Icon--Copy" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="icon-text alert alert-warning">
+        <i class="ms-Icon ms-Icon--Warning" aria-hidden="true"></i>
+        The NuGet Team does not provide support for this client. Please contact its <a href="https://fsprojects.github.io/Paket/contact.html">maintainers</a> for support.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.nuget.org/Scripts/gallery/site.min.js?v=uBd4cfF2ptMQM7tS8-_LDHUzMDNbpJ9ynKecXvDRak41"></script>
+<style type="text/css">
+  #package-manager .install-script::before { content: "PM> " } #dotnet-cli .install-script::before { content: "> " } #paket-cli .install-script::before { content: "> " }
+</style>
+<script type="text/javascript">
+  var packageManagers = ["package-manager","dotnet-cli","package-reference","paket-cli"];
+</script>
+<script src="https://www.nuget.org/Scripts/gallery/page-display-package.min.js?v=L8LkbHmyQwu-QQXmwemolA0iJsDl1aBhzzsmfX0ihkw1"></script>
+
+</body>
+
+</html>
