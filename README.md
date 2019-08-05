@@ -10,7 +10,11 @@ Embed an `iframe` and provide the `PackageId` as the slug of the `src`:
 
 :warning: The `iframe` tag is not allowed with [GitHub Flavored Markdown](https://github.github.com/gfm/), so this will not work in your `README.md`
 
-## :information_desk_person: Example with [NUnit](https://www.nuget.org/packages/NUnit/)
+## :information_desk_person: Example
+
+Example with [NUnit](https://www.nuget.org/packages/NUnit/):
+
+https://hlaueriksson.github.io/NuGetInstallTabs/
 
 ```html
 <iframe src="https://nuget-install-tabs.azurewebsites.net/api/NUnit"></iframe>
