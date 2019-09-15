@@ -1,5 +1,5 @@
 | NuGet            |       | [![{{package}}][1]][2]                                 {{ }} |
-| ---------------- | ----: | --------------------------------------------{{-}} |
+| :--------------- | ----: | :-------------------------------------------{{-}} |
 | Package Manager  | `PM>` | `Install-Package {{package}} -Version {{version}}`                 |
 | .NET CLI         | `>`   | `dotnet add package {{package}} --version {{version}}`             |
 | PackageReference |       | `<PackageReference Include="{{package}}" Version="{{version}}" />` |
